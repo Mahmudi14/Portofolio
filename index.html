@@ -1,732 +1,802 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="id">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Mahmuddin - Portofolio</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1d1d1d" />
 
-  <!-- Favicons -->
-  <link href="assets/img/LogoMhmd.png" rel="icon">
-  <link href="assets/img/LogoMhmd.png" rel="apple-touch-icon">
+  <title>Mahmudi — Manusia Biasa</title>
+  <meta name="description"
+    content="Portfolio Mahmudi — Software Engineering, Machine Learning, Data Mining, dan Internet of Things (IoT)." />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="assets/img/LogoMhmd.png" rel="icon" />
+  <link href="assets/img/LogoMhmd.png" rel="apple-touch-icon" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: SnapFolio
-  * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
-  * Updated: Jul 21 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="assets/css/main-modern.css" rel="stylesheet" />
 </head>
 
-<body class="index-page">
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
 
-  <header id="header" class="header dark-background d-flex flex-column justify-content-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+  <header class="site-header" id="siteHeader">
+    <div class="nav-shell">
+      <a href="#hero" class="brand" aria-label="Mahmudi home">
+        <span class="brand-mark"><img src="assets/img/LogoMhmd-navbar.png" alt aria-hidden="true" /></span>
+        <span class="brand-copy">
+          <strong>Mahmudi</strong>
+          <small>Manusia Biasa</small>
+        </span>
+      </a>
 
-    <div class="header-container d-flex flex-column align-items-start">
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-          <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-          <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-          <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-        </ul>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Buka navigasi" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Primary navigation">
+        <a href="#hero" class="nav-link active">Beranda</a>
+        <a href="#about" class="nav-link">Tentang</a>
+        <a href="#skills" class="nav-link">Keahlian</a>
+        <a href="#resume" class="nav-link">Pengalaman</a>
+        <a href="#portfolio" class="nav-link">Proyek</a>
+        <a href="#contact" class="nav-link nav-cta">Kontak</a>
       </nav>
-
-      <div class="social-links text-center">
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-youtube"></i></a>
-      </div>
-
     </div>
-
   </header>
 
-  <main class="main">
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero-section">
+      <canvas id="smokeCanvas" class="smoke-canvas" aria-hidden="true"></canvas>
+      <div class="hero-cursor-glow" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
+      <div class="container hero-container">
+        <div class="hero-copy reveal">
+          <h1>
+            Mahmudi
+            <span class="gradient-text">Manusia Biasa</span>
+          </h1>
 
-      <div class="background-elements">
-        <div class="bg-circle circle-1"></div>
-        <div class="bg-circle circle-2"></div>
-      </div>
+          <p class="hero-role">
+            <span>Software Engineering</span>
+            <span class="role-separator"></span>
+            <span>Machine Learning</span>
+            <span class="role-separator"></span>
+            <span>Data Mining</span>
+            <span class="role-separator"></span>
+            <span>Internet of Things</span>
+          </p>
 
-      <div class="hero-content">
+          <p class="hero-description">
+            Mengembangkan solusi digital berbasis web, data, AI, dan perangkat
+            terhubung.
+          </p>
 
-        <div class="container">
-          <div class="row align-items-center">
-
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-              <div class="hero-text">
-                <!-- <h1>Snap<span class="accent-text">Folio</span></h1> -->
-                <h2>Mahmuddin</h2>
-                <p class="lead">I'm a <span class="typed" data-typed-items="Web Developer, Machine Learning Engineer, Data Miner"></span></p>
-                <p class="description">"Saya seorang programmer dengan keahlian di bidang <strong>Web Development</strong>, <strong>Machine Learning</strong>, dan <strong>Data Mining</strong>. Fokus saya adalah mengubah data menjadi solusi nyata serta membangun aplikasi web modern yang bermanfaat, inovatif, dan user-friendly."</p>
-
-                <div class="hero-actions">
-                  <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                  <a href="#contact" class="btn btn-outline">Get In Touch</a>
-                </div>
-
-                <div class="social-links">
-                  <a href="https://www.instagram.com/_mahmudiii?utm_source=qr&igsh=eDR3NXJ3OWViZ3h4"><i class="bi bi-instagram"></i></a>
-                  <a href="https://youtube.com/@mahmuddin14?si=zW6SzJqAMcTCQbNi"><i class="bi bi-youtube"></i></a>
-                  <a href="https://github.com/Mahmudi14"><i class="bi bi-github"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-              <div class="hero-visual">
-                <div class="profile-container">
-                  <div class="profile-background"></div>
-                  <img src="assets/img/profile/mudi01.JPG" alt="Mahmuddin" class="profile-image">
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
-            <div class="profile-card">
-              <div class="profile-header">
-                <div class="profile-image">
-                  <img src="assets/img/profile/mudi02.JPG" alt="Profile Image" class="img-fluid">
-                </div>
-                <div class="profile-badge">
-                  <i class="bi bi-check-circle-fill"></i>
-                </div>
-              </div>
-
-              <div class="profile-content">
-                <h3>Mahmuddin</h3>
-                <p class="profession">Web Developer | Machine Learning Engineer | Data Miner</p>
-
-                <div class="contact-links">
-                  <a href="mailto:marcus@example.com" class="contact-item">
-                    <i class="bi bi-envelope"></i>
-                    mahmuddin@unsulbar.ac.id
-                  </a>
-                  <a href="tel:+15551234567" class="contact-item">
-                    <i class="bi bi-telephone"></i>
-                    +62 8582 3498 493
-                  </a>
-                  <a href="#" class="contact-item">
-                    <i class="bi bi-geo-alt"></i>
-                    Majene, Sulawesi Barat
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div class="hero-actions">
+            <a href="#portfolio" class="button button-primary">
+              <span>Lihat Proyek</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <a href="#contact" class="button button-ghost">
+              <span>Kontak</span>
+              <i class="bi bi-send"></i>
+            </a>
           </div>
 
-          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
-            <div class="about-content">
-              <div class="section-header">
-                <span class="badge-text">Get to Know Me</span>
-                <h2>Bersemangat dalam Membangun Solusi Digital yang Cerdas</h2>
-              </div>
-
-              <div class="description">
-                <p>Saya seorang programmer yang berfokus pada web Development, machine learning, dan data mining. Berpengalaman mengerjakan project akademik maupun praktis yang menggabungkan teknologi web modern dengan analisis data berbasis machine learning.</p>
-
-                <p>Tujuan saya adalah menciptakan solusi digital yang bermanfaat, dapat diakses dengan mudah, dan mampu membantu pengambilan keputusan berbasis data.</p>
-              </div>
-
-              <div class="stats-grid">
-                <div class="stat-item">
-                  <div class="stat-number">10+</div>
-                  <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">2+</div>
-                  <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">98%</div>
-                  <div class="stat-label">Collaboration Success</div>
-                </div>
-              </div>
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-number">10+</span>
+              <span class="meta-label">Projects</span>
+            </div>
+            <div class="meta-line"></div>
+            <div class="meta-item">
+              <span class="meta-number">5</span>
+              <span class="meta-label">IP / HKI</span>
+            </div>
+            <div class="meta-line"></div>
+            <div class="meta-item">
+              <span class="meta-number">3</span>
+              <span class="meta-label">Publications</span>
             </div>
           </div>
         </div>
 
-      </div>
+        <div class="hero-visual reveal reveal-delay">
+          <div class="id-stage" id="idStage">
+            <div class="id-stage-ring ring-a" aria-hidden="true"></div>
+            <div class="id-stage-ring ring-b" aria-hidden="true"></div>
+            <div class="id-card-floor-shadow" aria-hidden="true"></div>
 
-    </section><!-- /About Section -->
+            <div class="id-card-drop" id="idCardDrop">
+              <div class="id-card-drag" id="draggableIdCard" title="Drag the ID card • double-click to reset">
+                <article class="id-card" aria-label="Mahmudi profile identity card">
+                  <div class="id-slot" aria-hidden="true"><span></span></div>
 
+                  <div class="id-card-header">
+                    <div class="id-brand-lockup">
+                      <span class="id-logo-box">
+                        <img src="assets/img/LogoMhmd-navbar.png" alt="Mahmudi logo" />
+                      </span>
+                      <div>
+                        <strong>MHMD</strong>
+                        <small>DIGITAL PROFILE</small>
+                      </div>
+                    </div>
+                    <span class="id-card-index">ID / 001</span>
+                  </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
+                  <div class="id-photo-shell">
+                    <div class="id-photo-accent" aria-hidden="true"></div>
+                    <img src="assets/img/profile/mudi01.JPG" alt="Mahmudi" class="id-photo" />
+                    <span class="id-photo-code">SOFTWARE • ML • DATA •
+                      IoT</span>
+                  </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Kemampuan teknis yang saya kuasai meliputi Web Development, Machine Learning, dan Data Mining, dengan fokus pada pengembangan aplikasi berbasis web dan penerapan AI untuk solusi cerdas.</p>
-      </div><!-- End Section Title -->
+                  <div class="id-card-info">
+                    <span class="id-role">Software Engineer</span>
+                    <h2>Mahmudi</h2>
+                    <p>Machine Learning • Data Mining • IoT</p>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="id-card-meta">
+                      <div><span>Based</span><strong>Indonesia</strong></div>
+                    </div>
+                  </div>
 
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-              <h3>WEB Development</h3>
-              <div class="skills-animation">
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>HTML/CSS</h4>
-                    <span class="skill-percentage">95%</span>
+                  <div class="id-card-footer">
+                    <span class="id-barcode" aria-hidden="true"></span>
+                    <div>
+                      <small>SOFTWARE • AI • DATA • IoT</small>
+                      <strong>2026</strong>
+                    </div>
                   </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>JavaScript</h4>
-                    <span class="skill-percentage">75%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>PHP</h4>
-                    <span class="skill-percentage">85%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Frontend Skills -->
-          </div>
-
-          <div class="col-lg-6">
-            <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
-              <h3>Machine Learning & Data Mining</h3>
-              <div class="skills-animation">
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Python (Scikit-learn, TensorFlow, PyTorch)</h4>
-                    <span class="skill-percentage">85%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Data Preprocessing & Feature Engineering</h4>
-                    <span class="skill-percentage">80%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Model Evaluation & Optimization</h4>
-                    <span class="skill-percentage">75%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Text Mining & NLP</h4>
-                    <span class="skill-percentage">85%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Aspect-Based Sentiment Analysis (ABSA)</h4>
-                    <span class="skill-percentage">85%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Clustering & Classification</h4>
-                    <span class="skill-percentage">85%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Data Visualization (Matplotlib dan Seaborn)</h4>
-                    <span class="skill-percentage">80%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Backend Skills -->
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>Ringkasan pengalaman, pendidikan, dan keterampilan yang mendukung perjalanan profesional saya di bidang Web Development, Machine Learning, dan Data Mining.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <!-- Left column with summary and contact -->
-          <div class="col-lg-4">
-            <div class="resume-side" data-aos="fade-right" data-aos-delay="100">
-              <div class="profile-img mb-4">
-                <img src="assets/img/profile/mudi02.JPG" alt="Profile" class="img-fluid rounded">
-              </div>
-
-              <!-- <h3>Professional Summary</h3> -->
-              <p>Mahasiswa Informatika semester 7 Universitas Sulawesi Barat dengan fokus pada pengembangan website, machine learning, dan data mining. Berpengalaman dalam membangun aplikasi berbasis web menggunakan Laravel dan PHP, mengembangkan model klasifikasi data dengan Python, serta mengeksplorasi data untuk menemukan informasi yang bernilai.</p>
-
-              <h3 class="mt-4">Contact Information</h3>
-              <ul class="contact-info list-unstyled">
-                <li><i class="bi bi-geo-alt"></i> Majene, Sulawesi Barat</li>
-                <li><i class="bi bi-envelope"></i> mahmuddin@unsulbar.ac.id</li>
-                <li><i class="bi bi-phone"></i> +62 8582 3498 493</li>
-              </ul>
-
-              <div class="skills-animation mt-4">
-                <h3>Technical Skills</h3>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between">
-                    <span>Web Development</span>
-                    <span>80%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between">
-                    <span>Data Mining</span>
-                    <span>90%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between">
-                    <span>Machine Learning</span>
-                    <span>90%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between">
-                    <span>Project Management</span>
-                    <span>90%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right column with experience and education -->
-          <div class="col-lg-8 ps-4 ps-lg-5">
-            <!-- Experience Section -->
-            <div class="resume-section" data-aos="fade-up">
-              <h3><i class="bi bi-briefcase me-2"></i>Experience</h3>
-
-              <div class="resume-item">
-                <h4>Web Developer</h4>
-                <h5>2024 - 2025</h5>
-                <p class="company"><i class="bi bi-building"></i> CV. Afila Media Karya</p>
-                <ul>
-                  <li>Mengembangkan dan mengelola website dinamis menggunakan Laravel, PHP, dan MySQL</li>
-                  <li>Mengintegrasikan fitur CRUD, autentikasi, dan manajemen data sesuai kebutuhan client</li>
-                  <li>Berkolaborasi dengan tim untuk memastikan kualitas dan fungsionalitas sistem</li>
-                </ul>
+                </article>
               </div>
             </div>
 
-            <!-- Education Section -->
-            <div class="resume-section" data-aos="fade-up" data-aos-delay="100">
-              <h3><i class="bi bi-mortarboard me-2"></i>Education</h3>
-
-              <div class="resume-item">
-                <h4>Teknik Komputer dan Jaringan</h4>
-                <h5>2019 - 2022</h5>
-                <p class="company"><i class="bi bi-building"></i> SMKN 1 Papalang</p>
-                <p>Berpengalaman dalam dasar pemrograman, sistem operasi, instalasi jaringan, konfigurasi perangkat, serta perakitan dan perawatan komputer selama menempuh pendidikan di SMK jurusan TKJ.</p>
-              </div>
-
-              <div class="resume-item">
-                <h4>Teknik Informatika</h4>
-                <h5>2022 - Sekarang</h5>
-                <p class="company"><i class="bi bi-building"></i> Universitas Sulawesi Barat</p>
-                <ul>
-                  <li>Aktif mengembangkan project berbasis Web Development, Machine Learning, dan Data Mining</li>
-                  <li>Terlibat dalam penelitian dibidang Artificial Intelligence</li>
-                  <li>Ketua Umum Informatics Study Club</li>
-                  <li>Mengikuti dan berkontribusi dalam kompetisi coding kampus dan nasional</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Certifications Section -->
-            <div class="resume-section" data-aos="fade-up" data-aos-delay="200">
-              <h3><i class="bi bi-award me-2"></i>Certifications</h3>
-
-              <div class="resume-item">
-                <h4>Visualisasi Container Loding Problem Menggunakan Algortima Genetika - HAKI</h4>
-                <h5>2023</h5>
-              </div>
-              <div class="resume-item">
-                <h4>Aplikasi Deteksi Kematangan Buah Tomat Menggunakan Image RGB Dan Deep Learning Berbasis Website - HAKI</h4>
-                <h5>2024</h5>
-              </div>
-              <div class="resume-item">
-                <h4>Sistem Deteksi Buah Tomat Menggunakan Deep Learning dan Camera Thermal Berbasis Website - HAKI</h4>
-                <h5>2024</h5>
-              </div>
-              <div class="resume-item">
-                <h4>Java Framework For Genetic Algorithm To Solve Multi Depot Multi Traveling Salesman Problem - HAKI</h4>
-                <h5>2024</h5>
-              </div>
-
+            <div class="drag-hint" aria-hidden="true">
+              <i class="bi bi-arrows-move"></i>
+              <span>Geser kartu</span>
             </div>
           </div>
         </div>
-
       </div>
 
-    </section><!-- /Resume Section -->
+      <a class="scroll-hint" href="#about" aria-label="Scroll to about">
+        <span>Scroll</span>
+        <i class="bi bi-arrow-down"></i>
+      </a>
+    </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Kumpulan proyek yang telah saya kerjakan, mulai dari pengembangan website hingga penerapan Machine Learning dan Data Mining. Setiap karya mencerminkan kemampuan saya dalam membangun solusi digital yang fungsional, efisien, dan inovatif.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <div class="row">
-            <div class="col-lg-3 filter-sidebar">
-              <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
-                <ul class="portfolio-filters isotope-filters">
-                  <li data-filter="*" class="filter-active">All Projects</li>
-                  <li data-filter=".filter-website">Website</li>
-                  <li data-filter=".filter-machinelearning">Machine Learning</li>
-                  <li data-filter=".filter-datamining">Data Mining</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-9">
-              <div class="row gy-4 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-website">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/web-genbi.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Website</span>
-                        <h4>Website Profil GenBI</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/web-genbi.png" class="glightbox" title="Website Profil GenBI"><i class="bi bi-plus-lg"></i></a>
-                          <a href="https://github.com/Mahmudi14/WEB-GenBI" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-machinelearning">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/tenun-mandar.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Machine Learning</span>
-                        <h4>Klasifikasi Jenis Tenun Mandar</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/tenun-mandar.jpg" class="glightbox" title="Klasifikasi Jenis Tenun Mandar"><i class="bi bi-plus-lg"></i></a>
-                          <a href="https://github.com/Mahmudi14/KlasifikasiJenisMotifTenunMandar_CNN" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-datamining">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/analisis-sentimen.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Data Mining</span>
-                        <h4>Analisis Sentimen Destinasi Wisata</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/analisis-sentimen.png" class="glightbox" title="Analisis Sentimen Wisata"><i class="bi bi-plus-lg"></i></a>
-                          <a href="https://github.com/Mahmudi14/Analisis-Sentiment-Destinasi-Wisata" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-website">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/web-fakultas.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Website</span>
-                        <h4>Website Profil Fakultas Teknik Unsulbar</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/web-fakultas.png" class="glightbox" title="Website Profil Fakultas Teknik Unsulbar"><i class="bi bi-plus-lg"></i></a>
-                          <a href="https://ftunsulbar.mhmd.shop/" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-machinelearning">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/apel.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Machine Learning</span>
-                        <h4>Deteksi Kesegaran Apel</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/apel.jpg" class="glightbox" title="Deteksi Kesegaran Apel"><i class="bi bi-plus-lg"></i></a>
-                          <a href="https://github.com/Mahmudi14/Deteksi_Apel_Segar_Busuk-Backpropagationl" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-datamining">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/ulasan-produk.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Data Mining</span>
-                        <h4>Analisis Sentimen Ulasan Produk</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/ulasan-produk.png" class="glightbox" title="Analisis Sentimen Ulasan Produk"><i class="bi bi-plus-lg"></i></a>
-                          <a href="https://github.com/Mahmudi14/Aspect-Based-Sentiment-Analysis-Ulasan-Produk" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-              </div><!-- End Portfolio Container -->
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Jangan ragu untuk menghubungi saya jika Anda ingin berdiskusi, berkolaborasi, atau membutuhkan bantuan terkait Web Development, Machine Learning, maupun Data Mining.</p>
-      </div><!-- End Section Title -->
-
+    <!-- ABOUT -->
+    <section id="about" class="section about-section">
       <div class="container">
+        <div class="about-single reveal">
+          <div class="section-kicker">01 / Tentang</div>
 
-        <div class="row g-4 g-lg-5">
-          <div class="col-lg-5">
-            <div class="info-box">
+          <h2 class="about-title">
+            Tentang <span class="accent">Saya.</span>
+          </h2>
 
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-geo-alt"></i>
-                </div>
-                <div class="content">
-                  <h4>Alamat</h4>
-                  <p>Majene</p>
-                  <p>Sulawesi Barat</p>
-                </div>
-              </div>
+          <p class="about-lead">
+            Saya memiliki minat pada Software Engineering, Machine Learning,
+            Data Mining, dan Internet of Things (IoT). Saya tertarik
+            mengembangkan aplikasi dan sistem berbasis web, mengolah serta
+            menganalisis data, mengeksplorasi model machine learning, text
+            mining, NLP, dan analisis sentimen, serta mempelajari integrasi
+            perangkat, sensor, konektivitas, dan data pada sistem IoT. Selain
+            pengembangan teknologi, saya juga memiliki ketertarikan pada riset
+            dan penelitian, khususnya dalam proses eksplorasi masalah,
+            eksperimen, analisis data, dan pengembangan solusi berbasis
+            teknologi.
+          </p>
 
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-telephone"></i>
-                </div>
-                <div class="content">
-                  <h4>Nomor HP</h4>
-                  <p>+62 8582 3498 493</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-envelope"></i>
-                </div>
-                <div class="content">
-                  <h4>Email</h4>
-                  <p>mahmuddin@unsulbar.ac.id</p>
-                </div>
-              </div>
-            </div>
+          <div class="about-fields">
+            <span>Software Engineering</span>
+            <span>Machine Learning</span>
+            <span>Data Mining</span>
+            <span>Internet of Things</span>
+            <span>Research</span>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="col-lg-7">
-            <div class="contact-form">
-              <h3>Get In Touch</h3>
-              <p>Kirimkan pesan Anda melalui form berikut. Saya akan merespons secepat mungkin.</p>
-
-              <form action="forms/contact.php" method="post" class="php-email-form">
-                <div class="row gy-4">
-
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                  </div>
-
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                  </div>
-
-                  <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit" class="btn">Kirim Pesan</button>
-                  </div>
-
-                </div>
-              </form>
-
-            </div>
+    <!-- SKILLS -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-head section-head-compact reveal">
+          <div>
+            <div class="section-kicker">02 / Keahlian & Minat</div>
+            <h2>Fokus keahlian dan minat</h2>
           </div>
-
         </div>
 
+        <div class="skills-layout">
+          <article class="skill-panel reveal">
+            <div class="skill-panel-head">
+              <span>01</span>
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <h3>Software Engineering</h3>
+            <p>
+              Pengembangan aplikasi web dari antarmuka, backend, hingga basis
+              data.
+            </p>
+            <div class="tag-cloud">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
+              <span>Laravel</span><span>MySQL</span><span>REST API</span>
+            </div>
+          </article>
+
+          <article class="skill-panel reveal">
+            <div class="skill-panel-head">
+              <span>02</span>
+              <i class="bi bi-cpu"></i>
+            </div>
+            <h3>Machine Learning</h3>
+            <p>Preprocessing, pelatihan, evaluasi, dan optimasi model.</p>
+            <div class="tag-cloud">
+              <span>Python</span><span>Scikit-learn</span><span>TensorFlow</span>
+              <span>PyTorch</span><span>CNN</span><span>Classification</span><span>Clustering</span>
+            </div>
+          </article>
+
+          <article class="skill-panel reveal">
+            <div class="skill-panel-head">
+              <span>03</span>
+              <i class="bi bi-database"></i>
+            </div>
+            <h3>Data Mining & NLP</h3>
+            <p>Eksplorasi data, text mining, NLP, dan analisis sentimen.</p>
+            <div class="tag-cloud">
+              <span>Data Preprocessing</span><span>Feature
+                Engineering</span><span>Text Mining</span>
+              <span>NLP</span><span>ABSA</span><span>Sentiment Analysis</span>
+            </div>
+          </article>
+
+          <article class="skill-panel iot-card reveal">
+            <div class="skill-panel-head">
+              <span>04</span>
+              <i class="bi bi-router"></i>
+            </div>
+            <h3>Internet of Things</h3>
+            <p>
+              Peminatan pada integrasi perangkat, sensor, konektivitas, dan
+              data.
+            </p>
+            <div class="tag-cloud">
+              <span>IoT</span><span>Sensor</span><span>Connectivity</span><span>Data
+                Acquisition</span>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
 
-    </section><!-- /Contact Section -->
+    <!-- JOURNEY / RESUME -->
+    <section id="resume" class="section journey-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">03 / Pengalaman</div>
+            <h2>Pengalaman & Pencapaian</h2>
+          </div>
+        </div>
 
+        <div class="journey-grid">
+          <!-- Work Experience -->
+          <section class="journey-panel reveal" aria-labelledby="work-title">
+            <div class="journey-panel-head">
+              <div class="journey-heading-wrap">
+                <div class="journey-icon">
+                  <i class="bi bi-briefcase"></i>
+                </div>
+                <div>
+                  <h3 id="work-title">Pengalaman Kerja & Magang</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="experience-stack">
+              <article class="experience-card is-current">
+                <div class="experience-topline">
+                  <span class="experience-period">Saat ini</span>
+                </div>
+                <h4>Asisten Statisti</h4>
+                <p class="experience-company">BPS Provinsi Sulawesi Barat</p>
+                <p class="experience-summary">
+                  Magang di BPS Provinsi Sulawesi Barat.
+                </p>
+              </article>
+
+              <article class="experience-card">
+                <div class="experience-topline">
+                  <span class="experience-period">2024 — 2025</span>
+                  <span class="experience-type">Web Development</span>
+                </div>
+                <h4>Web Developer</h4>
+                <p class="experience-company">CV. Afila Media Karya</p>
+                <p class="experience-summary">
+                  Mengembangkan website menggunakan Laravel, PHP, MySQL, CRUD,
+                  autentikasi, dan manajemen data.
+                </p>
+              </article>
+
+              <article class="experience-card">
+                <div class="experience-topline">
+                  <span class="experience-period">2021</span>
+                  <span class="experience-type">Administration</span>
+                </div>
+                <h4>Administrasi</h4>
+                <p class="experience-company">
+                  Dinas Tanaman Pangan dan Hortikultura Provinsi Sulawesi
+                  Barat
+                </p>
+                <p class="experience-summary">
+                  Mengelola administrasi persuratan dan dokumen.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <!-- Organization -->
+          <section class="journey-panel reveal" aria-labelledby="organization-title">
+            <div class="journey-panel-head">
+              <div class="journey-heading-wrap">
+                <div class="journey-icon"><i class="bi bi-people"></i></div>
+                <div>
+                  <h3 id="organization-title">Pengalaman Organisasi</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="organization-list">
+              <article class="organization-item">
+                <div class="organization-period">2025 — 2026</div>
+                <div class="organization-copy">
+                  <h4>Ketua Umum</h4>
+                  <p>
+                    Generasi Baru Indonesia (GenBI) Komisariat Universitas
+                    Sulawesi Barat
+                  </p>
+                </div>
+              </article>
+
+              <article class="organization-item">
+                <div class="organization-period">2025 — 2026</div>
+                <div class="organization-copy">
+                  <h4>Pengurus</h4>
+                  <p>UKM Multimedia Universitas Sulawesi Barat</p>
+                </div>
+              </article>
+
+              <article class="organization-item">
+                <div class="organization-period">2024 — 2025</div>
+                <div class="organization-copy">
+                  <h4>Ketua Umum</h4>
+                  <p>Informatics Study Club</p>
+                </div>
+              </article>
+
+              <article class="organization-item">
+                <div class="organization-period">2024 — 2025</div>
+                <div class="organization-copy">
+                  <h4>Pengurus</h4>
+                  <p>
+                    Generasi Baru Indonesia (GenBI) Komisariat Universitas
+                    Sulawesi Barat
+                  </p>
+                </div>
+              </article>
+
+              <article class="organization-item">
+                <div class="organization-period">2023 — 2024</div>
+                <div class="organization-copy">
+                  <h4>Koordinator Divisi Sistem Cerdas</h4>
+                  <p>Informatics Study Club</p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <div class="journey-bottom-grid">
+          <!-- Education -->
+          <section class="journey-panel education-panel reveal" aria-labelledby="education-title">
+            <div class="journey-panel-head compact">
+              <div class="journey-heading-wrap">
+                <div class="journey-icon">
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+                <div>
+                  <h3 id="education-title">Pendidikan</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="education-list">
+              <article class="education-item">
+                <span class="education-year">2022 — 2026</span>
+                <h4>Teknik Informatika</h4>
+                <p>Universitas Sulawesi Barat</p>
+              </article>
+              <article class="education-item">
+                <span class="education-year">2019 — 2022</span>
+                <h4>Teknik Komputer dan Jaringan</h4>
+                <p>SMKN 1 Papalang</p>
+              </article>
+            </div>
+          </section>
+
+          <!-- Achievements -->
+          <div class="achievement-grid">
+            <!-- Bank Indonesia Scholarship -->
+            <article class="achievement-card scholarship-card">
+              <div class="achievement-mark">
+                <i class="bi bi-bank"></i>
+              </div>
+
+              <div>
+                <span class="achievement-year">2024 & 2025</span>
+                <h4>Penerima Beasiswa Bank Indonesia</h4>
+                <p>Bank Indonesia</p>
+              </div>
+            </article>
+
+            <!-- Google Student Ambassador -->
+            <article class="achievement-card">
+              <div class="achievement-mark">
+                <i class="bi bi-google"></i>
+              </div>
+
+              <div>
+                <span class="achievement-year">2025</span>
+                <h4>Google Student Ambassador</h4>
+                <p>Google</p>
+              </div>
+            </article>
+
+            <!-- LKTI -->
+            <article class="achievement-card">
+              <div class="achievement-mark">
+                <i class="bi bi-trophy"></i>
+              </div>
+
+              <div>
+                <span class="achievement-year">2024</span>
+                <h4>Juara 1 Lomba Karya Tulis Ilmiah</h4>
+                <p>Universitas Sulawesi Barat</p>
+              </div>
+            </article>
+
+            <!-- YELP -->
+            <article class="achievement-card">
+              <div class="achievement-mark">
+                <i class="bi bi-person-badge"></i>
+              </div>
+
+              <div>
+                <span class="achievement-year">2025</span>
+                <h4>Perwakilan Bank Indonesia Sulawesi Barat</h4>
+                <p>Youth Economic Leadership Program</p>
+              </div>
+            </article>
+
+            <!-- HKI -->
+            <article class="achievement-card hki-card">
+              <div class="achievement-mark">
+                <i class="bi bi-patch-check"></i>
+              </div>
+
+              <div class="hki-content">
+                <span class="achievement-year">
+                  Hak Kekayaan Intelektual
+                </span>
+
+                <h4>Portofolio HKI</h4>
+
+                <div class="hki-list">
+                  <span>
+                    Visualisasi Container Loading Problem Menggunakan
+                    Algoritma Genetika
+                  </span>
+
+                  <span>
+                    Aplikasi Deteksi Kematangan Buah Tomat Menggunakan Image
+                    RGB dan Deep Learning Berbasis Website
+                  </span>
+
+                  <span>
+                    Sistem Deteksi Buah Tomat Menggunakan Deep Learning dan
+                    Camera Thermal Berbasis Website
+                  </span>
+
+                  <span>
+                    Java Framework for Genetic Algorithm to Solve Multi Depot
+                    Multi Traveling Salesman Problem
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">04 / Project</div>
+            <h2>Daftar Project</h2>
+          </div>
+        </div>
+
+        <div class="project-filter reveal" role="group" aria-label="Portfolio filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="website">Website</button>
+          <button class="filter-btn" data-filter="machinelearning">
+            Machine Learning
+          </button>
+          <button class="filter-btn" data-filter="datamining">
+            Data Mining
+          </button>
+          <button class="filter-btn" data-filter="iot">
+            IoT
+          </button>
+        </div>
+
+        <!-- Daftar Project Disini -->
+        <div class="project-grid">
+          <article class="project-card reveal" data-category="website">
+            <a href="https://rotimaroshikmah.antohir.com/" target="_blank" rel="noreferrer" class="project-media">
+              <img src="assets/img/portfolio/web-roti-maros.png" alt="Website Kasir Roti Maros" loading="lazy" />
+              <span class="project-open"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <div class="project-content">
+              <span class="project-category">Website</span>
+              <h3>Website Kasir Roti Maros</h3>
+              <p>Website kasir untuk toko roti Maros.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="iot">
+            <a href="#" target="_blank" rel="noreferrer" class="project-media">
+              <img src="assets/img/portfolio/iot-jantung.png" alt="IoT Jantung" loading="lazy" />
+              <span class="project-open"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <div class="project-content">
+              <span class="project-category">IoT</span>
+              <h3>Model 3D Jantung</h3>
+              <p>Model 3D untuk pembelajaran ALiran Darah di jantung.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="website">
+            <a href="https://antohir.com/" target="_blank" rel="noreferrer" class="project-media">
+              <img src="assets/img/portfolio/web-antohir.png" alt="Website Landing Page Antohir" loading="lazy" />
+              <span class="project-open"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <div class="project-content">
+              <span class="project-category">Website</span>
+              <h3>Website Landing Page Antohir</h3>
+              <p>Website landing page untuk komunitas Antohir.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="website">
+            <a href="https://sione.antohir.com/" target="_blank" rel="noreferrer" class="project-media">
+              <img src="assets/img/portfolio/web-sione.png" alt="Website Sione" loading="lazy" />
+              <span class="project-open"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <div class="project-content">
+              <span class="project-category">Website</span>
+              <h3>Website Sione</h3>
+              <p>Website untuk lomba Rangking 1.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="website">
+            <a href="https://github.com/Mahmudi14/WEB-GenBI" target="_blank" rel="noreferrer" class="project-media">
+              <img src="assets/img/portfolio/web-genbi.png" alt="Website Profil GenBI" loading="lazy" />
+              <span class="project-open"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <div class="project-content">
+              <span class="project-category">Website</span>
+              <h3>Website Profil GenBI</h3>
+              <p>Website profil organisasi GenBI.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="machinelearning">
+            <a href="https://github.com/Mahmudi14/KlasifikasiJenisMotifTenunMandar_CNN" target="_blank" rel="noreferrer"
+              class="project-media">
+              <img src="assets/img/portfolio/tenun-mandar.jpg" alt="Klasifikasi Jenis Tenun Mandar" loading="lazy" />
+              <span class="project-open"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <div class="project-content">
+              <span class="project-category">Machine Learning</span>
+              <h3>Klasifikasi Jenis Tenun Mandar</h3>
+              <p>Klasifikasi citra motif Tenun Mandar menggunakan CNN.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="datamining">
+            <a href="https://github.com/Mahmudi14/Analisis-Sentiment-Destinasi-Wisata" target="_blank" rel="noreferrer"
+              class="project-media">
+              <img src="assets/img/portfolio/datamining-sentimendestinasiwisata.png" alt="Analisis Sentimen Destinasi Wisata"
+                loading="lazy" />
+              <span class="project-open"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <div class="project-content">
+              <span class="project-category">Data Mining</span>
+              <h3>Analisis Sentimen Destinasi Wisata</h3>
+              <p>Analisis sentimen ulasan destinasi wisata oleh turis mancanegara.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="website">
+            <a href="https://ftunsulbar.mhmd.shop/" target="_blank" rel="noreferrer" class="project-media">
+              <img src="assets/img/portfolio/web-fakultas.png" alt="Website Profil Fakultas Teknik Unsulbar"
+                loading="lazy" />
+              <span class="project-open"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <div class="project-content">
+              <span class="project-category">Website</span>
+              <h3>Website Profil Fakultas Teknik</h3>
+              <p>
+                Website profil Fakultas Teknik Universitas Sulawesi Barat.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="machinelearning">
+            <a href="https://github.com/Mahmudi14/Deteksi_Apel_Segar_Busuk-Backpropagationl" target="_blank"
+              rel="noreferrer" class="project-media">
+              <img src="assets/img/portfolio/ml-kesegaranapel.png" alt="Deteksi Kesegaran Apel" loading="lazy" />
+              <span class="project-open"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <div class="project-content">
+              <span class="project-category">Machine Learning</span>
+              <h3>Deteksi Kesegaran Apel</h3>
+              <p>Klasifikasi kesegaran apel menggunakan machine learning.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="datamining">
+            <a href="https://github.com/Mahmudi14/ABSA_IndoBert_Ulasan_Sepatu" target="_blank" rel="noreferrer"
+              class="project-media">
+              <img src="assets/img/portfolio/datamining-absasepatu.png" alt="Analisis Sentimen Ulasan Produk" loading="lazy" />
+              <span class="project-open"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <div class="project-content">
+              <span class="project-category">Data Mining</span>
+              <h3>Aspect-Based Sentiment Analysis</h3>
+              <p>Aspect-Based Sentiment Analysis pada ulasan produk.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="website">
+            <a href="#" target="_blank" rel="noreferrer"
+              class="project-media">
+              <img src="assets/img/portfolio/web-desatuboselatan.png" alt="Website Profil Desa Tubo Selatan" loading="lazy" />
+              <span class="project-open"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <div class="project-content">
+              <span class="project-category">Website</span>
+              <h3>Website Profil Desa Tubo Selatan</h3>
+              <p>Website profil desa dengan informasi terkini.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="website">
+            <a href="#" target="_blank" rel="noreferrer"
+              class="project-media">
+              <img src="assets/img/portfolio/web-pusdiplp.png" alt="Website Pusat Studi Perencanaan, Linkungan dan Pariwisata" loading="lazy" />
+              <span class="project-open"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <div class="project-content">
+              <span class="project-category">Website</span>
+              <h3>Website Pusat Studi Perencanaan, Lingkungan dan Pariwisata</h3>
+              <p>Website profil pusat studi dengan informasi terkini.</p>
+            </div>
+          </article>
+        </div>
+        <!-- Pagination -->
+        <div class="project-pagination" id="projectPagination" aria-label="Project pagination"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-shell reveal">
+          <div class="contact-copy">
+            <div class="section-kicker">05 / Kontak</div>
+            <h2>Hubungi <span class="accent">Saya.</span></h2>
+            <p>
+              Untuk kolaborasi atau proyek, kirim pesan melalui form berikut.
+            </p>
+
+            <div class="contact-direct">
+              <a href="mailto:mahmuddin@unsulbar.ac.id">
+                <i class="bi bi-envelope"></i>
+                <span>mahmuddin@unsulbar.ac.id</span>
+              </a>
+              <a href="tel:+6285823498493">
+                <i class="bi bi-telephone"></i>
+                <span>+62 858 2349 8493</span>
+              </a>
+            </div>
+
+            <div class="social-row">
+              <a href="https://www.instagram.com/_mahmudiii" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://youtube.com/@mahmuddin14" target="_blank" rel="noreferrer" aria-label="YouTube">
+                <i class="bi bi-youtube"></i>
+              </a>
+              <a href="https://github.com/Mahmudi14" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+          </div>
+
+          <form action="forms/contact.php" method="post" class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Nama</label>
+                <input id="name" name="name" type="text" placeholder="Nama" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@email.com" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="subject">Subjek</label>
+              <input id="subject" name="subject" type="text" placeholder="Subjek" required />
+            </div>
+
+            <div class="field">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" rows="6" placeholder="Tulis pesan..." required></textarea>
+            </div>
+
+            <button class="button button-primary form-button" type="submit">
+              <span>Kirim Pesan</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer id="footer" class="footer position-relative">
+  <a href="#hero" class="floating-top" id="floatingTop" aria-label="Kembali ke atas">
+    <i class="bi bi-arrow-up"></i>
+  </a>
 
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Mahmuddin</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="currentYear"></span> Mahmudi.</p>
     </div>
-
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/main-modern.js"></script>
 </body>
 
 </html>
